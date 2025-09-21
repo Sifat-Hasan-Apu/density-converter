@@ -5,21 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Density Converter</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Google Fonts: Roboto -->
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-
   <style>
-body {
-    font-family: 'Inter', sans-serif;
-    background-color: #f0f4f8;
-    color: #334155;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-}
-
-
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f0f4f8;
+      color: #334155;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
   </style>
 </head>
 <body class="p-4">
@@ -63,7 +59,7 @@ body {
     <!-- Result Container -->
     <div id="resultContainer" 
          class="mt-8 p-6 bg-green-50 border-l-4 border-green-400 text-green-800 rounded-md hidden">
-     
+      <p class="text-sm font-medium">Result:</p>
       <p id="resultText" class="text-xl font-bold mt-2"></p>
     </div>
     
@@ -88,7 +84,7 @@ body {
   </div>
 
   <!-- Footer -->
-<footer class="mt-8 text-center">
+  <footer class="mt-8 text-center">
     <p class="text-lg font-semibold text-gray-700">
       Powered by <span class="text-blue-600">Sifat Hasan Apu</span>
     </p>
@@ -96,7 +92,6 @@ body {
       United Payra Power Limited
     </p>
   </footer>
-
 
   <!-- JavaScript -->
   <script>
@@ -170,8 +165,7 @@ body {
       }
 
       const correctedDensity = calculateCorrectedDensity(observedDensity, observedTemperature);
-      resultText.textContent = `Density at 15 °C is : ${correctedDensity}`;
-
+      resultText.textContent = `${correctedDensity}`;
       resultContainer.classList.remove('hidden');
     });
 
@@ -185,9 +179,3 @@ body {
   </script>
 </body>
 </html>
-
-
-
-
-
-
